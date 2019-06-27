@@ -19,45 +19,44 @@
     <header>
         <h1>Ghibli Channel<span>~ dev tribute ~</span></h1>
     </header>
-    <main class="container">
-        <section>
-
-            <div>
-                <img class="presentation"  
-                 srcset="assets/images/presentation480.jpg 480w,
-                     assets/images/presentation640.jpg 640w"
-                 src="assets/images/presentation480.jpg" alt="My neighbor Totoro. Imagen de Estudios Ghibli" />
-            </div>
+    <main>
+        <section class="div-presentation">
+            <picture>
+                <source media="(min-width: 650px)" srcset="assets/images/login.jpg">
+                <source media="(max-width: 640px)" srcset="assets/images/login-640.jpg">
+                <source media="(max-width: 480px)" srcset="assets/images/login-480.jpg">
+                <img src="assets/images/login-480.jpg" alt="Ghibli Channel - A little Tribute For Educational Purposes Only">
+            </picture>             
         </section>
-        <section>
+        <section class="container">
             <div>
-                <div>
-                    <h2>Todas sus peliculas en cualquier dispositivo y a un click!</h2>
-                </div>
+                <h2>Todas las peliculas de Estudio Ghibli en cualquier dispositivo ¡y a un clic!</h2>
+            </div>
 
-                <div>
-                    <form>
-                        <h3>Acceso:</h3>
-                        <fieldset>
-                            <input type="email" placeholder="usuario / email" />
-                            <input type="password" placeholder="Password" />
-                        </fieldset>
-                        <fieldset>
-                            <!-- <input type="submit" name="Acceder"> -->
-                            <a href="main.html" class="btn">Acceder</a>
-                        </fieldset>
-                    </form>
-                    <p class="a-right">
-                        <a href="404.html" title="Regístrese en nuestro canal!">Registro</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="404.html" title="Acceda para recuperar su password">Recordar password</a>
-                    </p>
-                </div>
+            <div>
+                <form>
+                    <h3>Acceso:</h3>
+                    <fieldset>
+                        <input type="email" placeholder="usuario / email" />
+                        <input type="password" placeholder="Password" />
+                    </fieldset>
+                    <fieldset>
+                        <!-- <input type="submit" name="Acceder"> -->
+                        <a href="main.html" class="btn">Acceder</a>
+                    </fieldset>
+                    <fieldset>
+                        <p class="a-right">
+                            <a href="404.html" title="Regístrese en nuestro canal!">Registro</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="404.html" title="Acceda para recuperar su password">Recordar password</a>
+                        </p>
+                    </fieldset>
+                </form>
             </div>
 
         </section>        
     </main>
 
     <footer>
-        <section class="container">
+        <section>
             <div>
                 <h4>Más información:</h4>                
                 <ul id="social-list">

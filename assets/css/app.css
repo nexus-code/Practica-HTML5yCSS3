@@ -15,7 +15,8 @@ theme colors tests: https://coolors.co/114b5f-456990-e4fde1-f45b69-6b2737
   --secondary-color: #456990;
   --highlight-color: #F45B69;
   --highlight-color-hover: #6B2737;
-  --bg-color:  #f8f8f8;
+  /*--bg-color:  #f8f8f8;*/
+  --bg-color:  #fff;
   --max-width: 1140px;
 }
 
@@ -50,11 +51,13 @@ h1 span {
   margin-top: -14px;
 }
 
+
 h2 {
-  background-color:  var(--secondary-color);
+  background-color: var(--secondary-color);
   color: var(--bg-color);
   font-size: calc(var(--font-size)*1.25);
   padding: 1rem; 
+  vertical-align: middle;
 }
 
 h3 {
@@ -63,6 +66,13 @@ h3 {
   font-weight: 800;
   padding: 1rem; 
 }
+
+@media (min-width: 750px) {
+  h1 { font-size: calc(var(--font-size) * 5); }
+  h1 span { font-size: calc(var(--font-size) * 2); }
+  h2, h3  { font-size: calc(var(--font-size) * 2.5); }
+}
+
 
 a {
   color: var(--highlight-color);
@@ -80,55 +90,57 @@ main {
 }
 
 
-/*section {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-
-@media (min-width: 640px) {
-   section {
-    flex-direction: row;
-  }
-}*/
-
 /* 3 My styles */
 
-.container {
-  display: flex;
-  flex-direction: column;
+main {
   margin: 0 auto;
   max-width: var(--max-width);
 }
 
+.div-presentation{
+  text-align: center;
+}
+
+
+.div-presentation img{
+  width: 100%;
+  /*max-width: 480px;*/
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap ;
+}
+
 @media (min-width: 640px) {
-   .container {
-    flex-direction: row;
+  .container {
+    align-items: stretch;
+    align-self:  center;
+    background-color: var(--secondary-color);
+    flex-direction: row;    
+  }
+
+  .container div {
+    flex: 0.5;
+    padding: 1.5rem;
+  }
+
+  form {
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-color);
   }
 }
 
-.container div {
-  flex: 1;
-  padding: 1.5rem;
-}
-
-
-.presentation {
-  width: 100%;
-  max-width: 480px;
-}
-
-
-
 .btn {
   background-color: var(--highlight-color);
-  color: white;
-  padding: 12px 20px;
   border: none;
   border-radius: .25rem;
+  color: white;
   cursor: pointer;
   float: right;
+  padding: 12px 20px;
+  margin: 1rem 0;
 }
 
 .btn:hover {
@@ -154,6 +166,43 @@ ul#social-list li {
 }
 
 
+
+/* forms */
+
+form {
+
+  padding: 1rem;
+  /*max-width: calc(var(--max-width) / 2);*/
+}
+
+input[type=text],
+input[type=email],
+input[type=textarea],
+input[type=password] {
+  background-color: var(--bg-color);
+  background-clip: padding-box;
+  border: 0px;
+  border-bottom: 2px solid var(--primary-color);
+  display: block;
+  height: calc(1.5em + .75rem + 2px);
+  margin: 1.5rem;
+  padding: .3rem .5rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  width: 90%;
+}
+
+input::placeholder {
+  color: rgba(63, 128, 193, 0.6);
+  /*font-style: italic;*/
+}
+
+input[type=submit] {
+  background-color: #9096b0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: .25rem;
+}
 
 /* 4. 404 */
 
@@ -189,46 +238,26 @@ footer {
   margin-top: 1.5rem;
 }
 
+footer section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media (min-width: 640px) {
+   footer section {
+    flex-direction: row;
+  }
+}
+
+footer section div {
+  flex: 1;
+  padding: 1.5rem;
+}
+
 footer p:last-child {
   text-align: center;
   color: yellow;
   margin: 1rem 0;
-}
-
-
-/* forms */
-
-form {
-
-  padding: 1rem;
-  /*max-width: calc(var(--max-width) / 2);*/
-}
-
-input[type=text],
-input[type=email],
-input[type=textarea],
-input[type=password] {
-  background-color: rgba(245, 245, 245, .6);
-  background-clip: padding-box;
-  border: 0px;
-  border-bottom: 2px solid var(--primary-color);
-  display: block;
-  height: calc(1.5em + .75rem + 2px);
-  margin: 1.5rem;
-  padding: .3rem .5rem;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  width: 90%;
-}
-
-input::placeholder {
-  color: rgba(63, 128, 193, 0.6);
-  /*font-style: italic;*/
-}
-
-input[type=submit] {
-  background-color: #9096b0;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: .25rem;
 }
