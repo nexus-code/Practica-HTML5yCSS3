@@ -113,12 +113,16 @@ main {
   flex-wrap: wrap ;
 }
 
+
 @media (min-width: 640px) {
   .container {
     align-items: stretch;
     align-self:  center;
-    background-color: var(--secondary-color);
     flex-direction: row;    
+  }
+
+  .container-color {
+    background-color: var(--secondary-color);
   }
 
   .container div {
@@ -153,12 +157,28 @@ main {
   padding-right: .5rem
 }
 
-ul#social-list li {
+ul li {
   display:inline;
-  padding-right: 1rem;
-  font-size: calc(var(--font-size)*1.75);
-
 }
+
+ul#social-list li {
+  font-size: calc(var(--font-size)*1.75);
+  padding-right: 1rem;
+}
+
+ul#breadcrumbs {
+  text-align: right;
+  padding: .75rem
+}
+
+ul#breadcrumbs li+li:before {
+  content: "/\00a0";
+}
+
+ul#breadcrumbs li:last-child {
+  font-weight: 600;
+}
+
 
 .search {
   /* https://www.w3schools.com/css/tryit.asp?filename=trycss_form_search_anim */
@@ -204,6 +224,40 @@ input[type=submit] {
   border-radius: .25rem;
 }
 
+/* movies */
+
+.movie {
+/*  background-image: url(../images/bg-movie.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;*/
+}
+
+.movie img {
+    box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 1);
+    border: 2px solid #fff;
+}
+
+.poster {
+  text-align: center;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+table {
+  color: #000;
+}
+
+table tr th {
+  font-weight: bold;
+  text-align: left;
+}
+
+
 /* 4. 404 */
 
 .kodamas-404 {
@@ -234,7 +288,6 @@ input[type=submit] {
 footer {
   background-color: var(--primary-color);
   color: var(--bg-color);
-  /*display: flex;*/
   margin-top: 1.5rem;
 }
 
