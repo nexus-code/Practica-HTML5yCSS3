@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site para práctica 2. Bootcamp fullstack keepcoding. For Educational Purposes Only" />
+    <meta name="description" content="Site para práctica 2. Bootcamp fullstack Keepcoding. For Educational Purposes Only" />
     <meta author="Miguel Ángel Cárdenas | Nexus Code">
     <title>Ghibli Channel - A little Tribute For Educational Purposes Only</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -19,40 +19,45 @@
     <header>
         <h1>Ghibli Channel<span>~ dev tribute ~</span></h1>
     </header>
-
-    <main>
+    <main class="container">
         <section>
-            
-            <img class="movile presentation"  
+
+            <div>
+                <img class="presentation"  
                  srcset="assets/images/presentation480.jpg 480w,
                      assets/images/presentation640.jpg 640w"
-                 src="assets/images/presentation480.jpg" alt="My neighbor Totoro. Imagen de Estudios Ghibli">
+                 src="assets/images/presentation480.jpg" alt="My neighbor Totoro. Imagen de Estudios Ghibli" />
+            </div>
+        </section>
+        <section>
+            <div>
+                <div>
+                    <h2>Todas sus peliculas en cualquier dispositivo y a un click!</h2>
+                </div>
 
-            <h2>Todas sus peliculas en cualquier dispositivo y a un click!</h2>
-
-
-            <h3>Acceso:</h3>
-            <hr>
-            <form>
-                <fieldset>
-                    <input type="email" placeholder="usuario / email" />
-                    <input type="password" placeholder="Password" />
-                </fieldset>
-                <fieldset>
-                    <!-- <input type="submit" name="Acceder"> -->
-                    <a href="main.html" class="btn">Acceder</a>
-                </fieldset>
-            </form>
-            <p class="a-right">
-                <a href="404.html" title="Regístrese en nuestro canal!">Registro</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="404.html" title="Acceda para recuperar su password">Recordar password</a>
-            </p>
+                <div>
+                    <form>
+                        <h3>Acceso:</h3>
+                        <fieldset>
+                            <input type="email" placeholder="usuario / email" />
+                            <input type="password" placeholder="Password" />
+                        </fieldset>
+                        <fieldset>
+                            <!-- <input type="submit" name="Acceder"> -->
+                            <a href="main.html" class="btn">Acceder</a>
+                        </fieldset>
+                    </form>
+                    <p class="a-right">
+                        <a href="404.html" title="Regístrese en nuestro canal!">Registro</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="404.html" title="Acceda para recuperar su password">Recordar password</a>
+                    </p>
+                </div>
+            </div>
 
         </section>        
     </main>
 
-
     <footer>
-        <section>
+        <section class="container">
             <div>
                 <h4>Más información:</h4>                
                 <ul id="social-list">
@@ -69,18 +74,13 @@
                 <p></p>
             </div>
             <div>
-                <h4>Newsletters:</h4>
-                <input type="text" placeholder="email" />
-                <a href="main.html" class="btn">Enviar</a>
-            </div>
-            <div>
-                <hr>
                 <p>Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. </p>
-                    <br>
-                    <p>Sitio de motivación pedagógica sin ánimo comercial</p>
+                <br>
+                <hr>
+                <p>Sitio de motivación pedagógica sin ánimo comercial</p>
             </div>            
         </section>
     </footer>

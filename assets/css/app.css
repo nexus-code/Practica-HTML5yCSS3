@@ -16,7 +16,7 @@ theme colors tests: https://coolors.co/114b5f-456990-e4fde1-f45b69-6b2737
   --highlight-color: #F45B69;
   --highlight-color-hover: #6B2737;
   --bg-color:  #f8f8f8;
-  --max-width: 1wh;
+  --max-width: 1140px;
 }
 
 
@@ -74,16 +74,52 @@ a:hover {
   color: var(--highlight-hover-color);
 }
 
-section {
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+
+/*section {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
+
+
+@media (min-width: 640px) {
+   section {
+    flex-direction: row;
+  }
+}*/
 
 /* 3 My styles */
 
-.presentation {
-  max-width: 100%;
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--max-width);
 }
+
+@media (min-width: 640px) {
+   .container {
+    flex-direction: row;
+  }
+}
+
+.container div {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+
+.presentation {
+  width: 100%;
+  max-width: 480px;
+}
+
+
 
 .btn {
   background-color: var(--highlight-color);
@@ -118,6 +154,7 @@ ul#social-list li {
 }
 
 
+
 /* 4. 404 */
 
 .kodamas-404 {
@@ -148,19 +185,8 @@ ul#social-list li {
 footer {
   background-color: var(--primary-color);
   color: var(--bg-color);
-  display: flex;
+  /*display: flex;*/
   margin-top: 1.5rem;
-}
-
-footer section {
-
-  display: flex;
-  max-width: var(--max-width);
-  width: 100%;
-}
-
-footer div {
-  padding: 1rem;
 }
 
 footer p:last-child {
@@ -170,12 +196,12 @@ footer p:last-child {
 }
 
 
-
 /* forms */
 
 form {
 
   padding: 1rem;
+  /*max-width: calc(var(--max-width) / 2);*/
 }
 
 input[type=text],
