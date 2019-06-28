@@ -40,7 +40,7 @@ h1, h2, h3{
 }
 
 h1 {
-  font-size: calc(var(--font-size) * 3);
+  font-size: calc(var(--font-size) * 2.8);
   font-weight: 800;
 }
 
@@ -92,12 +92,14 @@ header, main {
 
 
 /* 3 My styles */
-
 main {
   margin: 0 auto;
   max-width: var(--max-width);
 }
 
+.pt-10 {
+  padding-top: 10vh;
+}
 .div-presentation{
   text-align: center;
 }
@@ -182,39 +184,55 @@ ul#breadcrumbs li:last-child {
 
 
 /* navbar */
-/* Adapto https://codepen.io/jo_Geek/pen/xgbaEr con ligeras modificaciones */
+/* Adapto el código de clase */
 
-nav {
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-.nav {
-  display: flex;
-
-  height: 50px;
-  width: 100%;
+.navbar {
   background-color: var(--bg-color);
-  position: relative;
+  width: 100%;
+  position: fixed;
+  top: 0;
   z-index: 1;
+
+  display: flex;
+  align-items: center;
 }
 
-.nav > .nav-header {
-  display: inline;
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+
+  flex: 1 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.nav > .nav-header > .nav-title a {
-  display: inline-block;
-  padding: var(--font-size);
+.navbar-item > a {
+  text-decoration: none;
+  color: var(--highlight-color);
+  padding: 1rem;
+  display: block;
 }
 
-.nav > .nav-header > .nav-title a {
+.navbar-item > a:hover {
+  color: azure;
+  background-color: var(--highlight-color);
+  transition: all 1s ease-in;
+}
+
+.logo {
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex: 220px;
+  margin-left: 1rem;
+}
+
+.logo a {
   color: var(--primary-color);
   font-size: calc(var(--font-size) * 2);
   font-weight: 800;
 }
 
-.nav > .nav-header > .nav-title a span {
+.logo a span {
   color: var(--highlight-color);
   display: block;
   font-size: calc(var(--font-size)*1.1);
@@ -223,74 +241,83 @@ nav {
 }
 
 
-.nav > .nav-btn {
+
+#burger-checkbox {
   display: none;
 }
 
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: calc(var(--font-size)*1.25);
-}
-
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: calc(var(--font-size)*1.25);
-}
-
-.nav > .nav-links > a:hover {
-  background-color: var(--primary-color);
-}
-
-.nav > #nav-check {
-  display: none;
-}
-
-@media (max-width:480px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+@media all and (max-width: 768px) {
+  .navbar {
+    width: 40%;
   }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    margin-top: 51px;
+    height: 100vh;
+    justify-content: flex-start;
+    background-color: var(--highlight-color);
+    padding-left: 0;
   }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: var(--primary-color);
+  
+  .navbar-list li a {
+    color: var(--bg-color);
+    text-align: center;
   }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
+
+  .navbar .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
+    text-align: center;
+    background-color: var(--bg-color);
+    margin: 0;
   }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
+
+  .navbar .logo a {
+    font-size: calc(var(--font-size) * 1.8);
   }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
+
+  #burger-checkbox {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 51px;
+    height: 51px;
+    opacity: 0;
   }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(50vh);
-    overflow-y: auto;
+
+  #burger-checkbox:checked ~ .navbar-list {
+    display: inherit;
   }
+  
+  .burger-label {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 51px;
+    height: 51px;
+    font-size: 42px;
+  }
+
+  .burger-label:before {
+    content: "";
+    position: absolute;
+    background: gray;
+    width: 1em;
+    height: .15em;
+    left: .1em;
+    top: .25em;
+    box-shadow:
+      0 .25em 0 0 gray,
+      0 .5em 0 0 gray;
+  }  
 }
+
 
 .nav .search {
   /* https://www.w3schools.com/css/tryit.asp?filename=trycss_form_search_anim */
@@ -300,9 +327,7 @@ nav {
 /* forms */
 
 form {
-
   padding: 1rem;
-  /*max-width: calc(var(--max-width) / 2);*/
 }
 
 input[type=text],
@@ -351,6 +376,12 @@ input[type=submit] {
 
 .poster {
   text-align: center;
+}
+
+@media (min-width: 640px) {
+  .poster {
+    margin: 24px 0;
+  }
 }
 
 video {
