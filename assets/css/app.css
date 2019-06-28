@@ -15,10 +15,9 @@ theme colors tests: https://coolors.co/114b5f-456990-e4fde1-f45b69-6b2737
   --secondary-color: #456990;
   --highlight-color: #F45B69;
   --highlight-color-hover: #6B2737;
-  --bg-color:  #fff;
+  --bg-color: #fff;
   --max-width: 1140px;
 }
-
 
 /* 2. HTML basics*/
 
@@ -368,26 +367,13 @@ input::placeholder {
 
 /* movies */
 
-.movie {
-/*  background-image: url(../images/bg-movie.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;*/
-}
-
-/*.movie img {
-    box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 1);
-    border: 2px solid #fff;
-}*/
-
 .poster {
   text-align: center;
 }
 
 .poster img {
     box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 1);
-    border: 2px solid #fff;
+    border: 2px solid var(--bg-color);
 }
 
 @media (min-width: 640px) {
@@ -415,15 +401,22 @@ table tr th {
 */
 .container-pics {
   margin: auto;
-  border: #fff solid 5px;
-  background: #fff;
+  border: var(--bg-color) solid 5px;
+  background: var(--bg-color);
+}
+
+.container-pics h3 {
+  font-size: calc(var(--font-size)*2);
+  padding: calc(var(--font-size)*2.5);
+
 }
 
 /* mak images fill their container*/
-img {
+.container-pics img {
   max-width: 100%;
 }
-img:hover {
+
+.container-pics img:hover {
   opacity: 0.5;
   cursor: pointer;
 }
@@ -460,7 +453,7 @@ img:hover {
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: var(--bg-color);
   height: 100vh;
 }
 
