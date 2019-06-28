@@ -4,59 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site para práctica 2. Bootcamp fullstac keepcoding. For Educational Purposes Only" />
+    <meta name="description" content="Site para práctica 2. Bootcamp fullstack Keepcoding. For Educational Purposes Only" />
     <meta author="Miguel Ángel Cárdenas | Nexus Code">
-    <title>Studio Ghibli Channel - Tribute For Educational Purposes Only</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Home - Ghibli Channel - A little Tribute For Educational Purposes Only</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
-<body class="bg-image bg-main">
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" title="Ir a home">Ghibli Channel<span>~ dev tribute ~</span></a></div>
+
+        <input type="checkbox" id="burger-checkbox">
+        <label for="burger-checkbox" class="burger-label"></label>
+
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="#" class="active"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li class="navbar-item"><a href="#">Películas</a></li>
+            <li class="navbar-item"><a href="#">Series</a></li>
+            <li class="navbar-item"><a href="#">Personajes</a></li>
+            <li class="navbar-item"><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <h1>Ghibli Channel<span>A Studio Ghibli Tribute</span></h1>
+        <h1 class="pt-10">Películas<span>Ghibli channel</span> </h1>
     </header>
-    <section class="container">
-        <div class="box rounded">
-            <form>
-                <h3>Acceso:</h3>
-                <input type="email" placeholder="usuario / email" />
-                <input type="password" placeholder="Password" />
-                <!-- <input type="submit" name="Acceder"> -->
-                <a href="main.html" class="btn">Acceder</a>
-            </form>
-            <p class="t-right">
-                <a href="404.html" title="Regístrese en nuestro canal!">Registro</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="404.html" title="Acceda para recuperar su password">Recordar password</a>
-            </p>
-        </div>
-    </section>
+
+    <main class="movie">
+        <section>
+<div class="container">
+  <div class="img-grid">
+    <img src="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg" alt="">
+    <img src="https://static.pexels.com/photos/356056/pexels-photo-356056.jpeg" alt="">
+    <img src="https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg" alt="">
+    <img src="https://static.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg" alt="">
+    <img src="https://static.pexels.com/photos/50711/board-electronics-computer-data-processing-50711.jpeg" alt="">
+    <img src="https://static.pexels.com/photos/247932/pexels-photo-247932.jpeg" alt="">
+    <img src="https://static.pexels.com/photos/96381/pexels-photo-96381.jpeg" alt="">
+    <img src="https://static.pexels.com/photos/450035/pexels-photo-450035.jpeg" alt="">
+  </div>
+</div>
+        </section>
+        <section class="container row-reverse container-color">
+            
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </main>
     <footer>
-        <div class="container">
+        <section>
             <div>
-                <h4>Contacto</h4>
-                <p><a href="mailto:noreply@ghiblichannel.dev">noreply@ghiblichannel.dev</a></p>
-                <hr>
-                <h4>Información legal</h4>
+                <h4><i class="fa fa-share-alt" aria-hidden="true"></i> Más información:</h4>
+                <ul id="social-list">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+                <br>
+                <h4><i class="fa fa-envelope-open-o" aria-hidden="true"></i> Contacto:</h4>
+                <p><a href="mailto:noreply@ghiblichannel.dev"> noreply@ghiblichannel.dev</a></p>
+                <br>
+                <h4><i class="fa fa-info" aria-hidden="true"></i>nformación legal:</h4>
                 <p><a href="#">Aviso legal</a>&nbsp;|&nbsp;<a href="#">Política de privacidad</a>&nbsp;|&nbsp;<a href="#">Política de cookies</a></p>
                 <p></p>
             </div>
             <div>
-                <h4>Newsletters:</h4>
-                <input type="text" placeholder="email" />
-                <a href="main.html" class="btn">Enviar</a>
-            </div>
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                <hr>
                 <p>Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. </p>
-                    <p>- 2019. Sitio de motivación pedagógica sin ánimo comercial - </p>
+                <br>
+                <hr>
+                <p>Site desarrollado para aprendizaje. 2019</p>
             </div>
-        </div>
+        </section>
     </footer>
 </body>
 

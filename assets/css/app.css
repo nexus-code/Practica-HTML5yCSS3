@@ -139,21 +139,6 @@ main {
   }
 }
 
-.btn {
-  background-color: var(--highlight-color);
-  border: none;
-  border-radius: .25rem;
-  color: white;
-  cursor: pointer;
-  float: right;
-  padding: 12px 20px;
-  margin: 1rem 0;
-}
-
-.btn:hover {
-  background-color: var(--highlight-color-hover);
-  color: white;
-}
 
 .a-right {
   text-align: right;
@@ -214,9 +199,14 @@ ul#breadcrumbs li:last-child {
 }
 
 .navbar-item > a:hover {
-  color: azure;
+  color: var(--bg-color);
   background-color: var(--highlight-color);
   transition: all 1s ease-in;
+}
+
+.navbar-item a.active {
+  color: var(--bg-color);
+  background-color: var(--highlight-color);
 }
 
 .logo {
@@ -239,8 +229,6 @@ ul#breadcrumbs li:last-child {
   margin-top: -10px;
   text-align: center;
 }
-
-
 
 #burger-checkbox {
   display: none;
@@ -324,10 +312,30 @@ ul#breadcrumbs li:last-child {
   /* https://www.w3schools.com/css/searchicon.png */
 }
 
+
 /* forms */
 
 form {
   padding: 1rem;
+}
+
+
+.btn {
+  background-color: var(--highlight-color);
+  border: 1px solid var(--highlight-color);
+  border-radius: .25rem;
+  color: var(--bg-color);
+  cursor: pointer;
+  float: right;
+  padding: 12px 20px;
+  margin: 1rem 0;
+  transition: 0.6s;
+}
+
+.btn:hover {
+  background-color: var(--bg-color);
+  color: var(--highlight-color);
+  font-weight: 800;
 }
 
 input[type=text],
@@ -347,17 +355,16 @@ input[type=password] {
 }
 
 input::placeholder {
-  color: rgba(63, 128, 193, 0.6);
-  /*font-style: italic;*/
+  color: var(--secondary-color);
 }
 
-input[type=submit] {
-  background-color: #9096b0;
-  color: white;
+/*input[type=submit] {
+  background-color: var(--highlight-color);
+  color: var(--bg-color);
   padding: 12px 20px;
   border: none;
   border-radius: .25rem;
-}
+}*/
 
 /* movies */
 
@@ -369,13 +376,18 @@ input[type=submit] {
   height: 100vh;*/
 }
 
-.movie img {
+/*.movie img {
     box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 1);
     border: 2px solid #fff;
-}
+}*/
 
 .poster {
   text-align: center;
+}
+
+.poster img {
+    box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 1);
+    border: 2px solid #fff;
 }
 
 @media (min-width: 640px) {
@@ -397,6 +409,48 @@ table tr th {
   font-weight: bold;
   text-align: left;
 }
+
+/* movies grid  
+   fuente: https://codepen.io/d_coll/pen/mpoMJw
+*/
+.container-pics {
+  margin: auto;
+  border: #fff solid 5px;
+  background: #fff;
+}
+
+/* mak images fill their container*/
+img {
+  max-width: 100%;
+}
+img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* CSS Grid*/
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+}
+
+/* Media Query for changing grid on bigger screens*/
+
+/* Bigger than Phones(tablet) */
+@media only screen and (min-width: 750px) {
+  .img-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Bigger than Phones(laptop / desktop) */
+@media only screen and (min-width: 970px) {
+  .img-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 
 
 /* 4. 404 */
