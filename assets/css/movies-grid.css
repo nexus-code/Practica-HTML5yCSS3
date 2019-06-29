@@ -26,6 +26,7 @@
 
 /* CSS Grid*/
 .img-grid {
+  align-items: stretch;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 5px;
