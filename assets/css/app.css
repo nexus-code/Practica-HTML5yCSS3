@@ -72,6 +72,12 @@ h3 {
   h2, h3  { font-size: calc(var(--font-size) * 2.5); }
 }
 
+@media (max-width: 970px) {
+
+  hr {display: none;}
+}
+
+
 
 a {
   color: var(--highlight-color);
