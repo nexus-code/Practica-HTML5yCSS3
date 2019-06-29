@@ -1,0 +1,24 @@
+
+/* 4. 404 */
+
+.kodamas-404 {
+  background-image: url(../images/bg-404.jpg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--bg-color);
+  height: 100vh;
+}
+
+.kodamas-404 h1 {
+  font-size: calc(var(--font-size)*6);
+  margin: 2rem;
+}
+
+.kodamas-404 a {
+  color: var(--bg-color);
+}
+
+.kodamas-404 a:hover {
+  color: var(--highlight-color);
+}
