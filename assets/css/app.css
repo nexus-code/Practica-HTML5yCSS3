@@ -93,17 +93,22 @@ header, main {
   margin-bottom: 12px;
 }
 
-
-/* 3 My styles */
 main {
   margin: 0 auto;
   max-width: var(--max-width);
 }
 
+
+@media (max-width: 640px) {
+
+  p { padding: 0 1rem;}
+}
+
+/* 3 My styles */
+
+
 .main-movie section {
-
   margin-bottom: 4vh;
-
 }
 
 .pt-10 {

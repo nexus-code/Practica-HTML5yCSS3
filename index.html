@@ -6,95 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site para práctica 2. Bootcamp fullstack Keepcoding. For Educational Purposes Only" />
     <meta author="Miguel Ángel Cárdenas | Nexus Code">
-    <title>Home - Ghibli Channel - A little Tribute For Educational Purposes Only</title>
+    <title>Ghibli Channel - A little Tribute For Educational Purposes Only</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/app.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/nav.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/movies-grid.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo"><a href="index.html" title="Ir a home">Ghibli Channel<span>~ dev tribute ~</span></a></div>
-        <input type="checkbox" id="burger-checkbox">
-        <label for="burger-checkbox" class="burger-label"></label>
-        <ul class="navbar-list">
-            <li class="navbar-item"><a href="index.html" class="active"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-            <li class="navbar-item"><a href="#"><i class="fa fa-film" aria-hidden="true"></i> Películas</a></li>
-            <li class="navbar-item"><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> Mi canal</a></li>
-            <li class="navbar-item"><a href="login.html" title="Cerrar sesión">Salir <i class="fa fa-sign-out" aria-hidden="true"></i> </a></li>
-        </ul>
-    </nav>
     <header>
-        <h1 class="animate-left pt-10">Películas<span>Ghibli channel</span></h1>
-        <p></p>
+        <h1 class="animate-left pt-10">Ghibli Channel</h1>
+        <h1 class="animate-right"><span>~ dev tribute ~</span></h1>
     </header>
     <main>
-        <section>
-            <hr>
-            <div class="container-movies">
-                <div class="movies-grid index">
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/1.jpg" alt=""></a>
-                        <div class="movie-info"><span>Nausicaä del Valle del Viento (1984)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/2.jpg" alt=""></a>
-                        <div class="movie-info"><span>El castillo en el cielo (1986))</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/3.jpg" alt=""></a>
-                        <div class="movie-info"><span>Mi vecino Totoro (1988)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/4.jpg" alt=""></a>
-                        <div class="movie-info"><span>Kiki: entregas a domicilio (1989)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/5.jpg" alt=""></a>
-                        <div class="movie-info"><span>Porco Rosso (1992)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/6.jpg" alt=""></a>
-                        <div class="movie-info"><span>Susurros del corazón (1995)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/7.jpg" alt=""></a>
-                        <div class="movie-info"><span>La princesa Mononoke (1997)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/8.jpg" alt=""></a>
-                        <div class="movie-info"><span>El viaje de Chihiro (2001)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/9.jpg" alt=""></a>
-                        <div class="movie-info"><span>El castillo ambulante (2004)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/10.jpg" alt=""></a>
-                        <div class="movie-info"><span>Ponyo en el acantilado (2008)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/11.jpg" alt=""></a>
-                            <div class="movie-info"><span>Arrietty y el mundo de los diminutos (2010)</span> <br> Apta para todos los públicos<br></div>
-                        </div>
-                    <div class="movie">
-                        <a href="movie.html" title=""><img src="assets/movies/12.jpg" alt=""></a>
-                        <div class="movie-info"><span>Arrietty y el mundo de los diminutos (2011)</span> <br> Apta para todos los públicos<br></div>
-                    </div>
-                </div>
-            </div>
-            <hr>
+        <section class="div-presentation">
+            <picture>
+                <source media="(min-width: 650px)" srcset="assets/images/login.jpg">
+                <source media="(max-width: 640px)" srcset="assets/images/login-640.jpg">
+                <source media="(max-width: 480px)" srcset="assets/images/login-480.jpg">
+                <img src="assets/images/login-480.jpg" alt="Ghibli Channel - A little Tribute For Educational Purposes Only">
+            </picture>             
         </section>
+        <section class="container container-color">
+            <div>
+                <h2>Todas las peliculas de Estudio Ghibli en cualquier dispositivo ¡y a un clic!</h2>
+            </div>
+
+            <div>
+                <form>
+                    <h3>Acceso:</h3>
+                    <fieldset>
+                        <input type="email" placeholder="usuario / email" />
+                        <input type="password" placeholder="Password" />
+                    </fieldset>
+                    <fieldset>
+                        <!-- <input type="submit" name="Acceder"> -->
+                        <a href="movies.html" class="btn">Acceder</a>
+                    </fieldset>
+                    <fieldset>
+                        <p class="a-right">
+                            <a href="404.html" title="Regístrese en nuestro canal!">Registro</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="404.html" title="Acceda para recuperar su password">Recordar password</a>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+
+        </section>        
     </main>
+
     <footer>
         <section>
             <div>
-                <h4><i class="fa fa-share-alt" aria-hidden="true"></i> Más información:</h4>
+                <h4><i class="fa fa-share-alt" aria-hidden="true"></i> Más información:</h4>                
                 <ul id="social-list">
                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -116,7 +82,7 @@
                 <br>
                 <hr>
                 <p>Site developed for learning. 2019</p>
-            </div>
+            </div>            
         </section>
     </footer>
 </body>
