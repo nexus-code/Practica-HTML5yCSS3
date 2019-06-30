@@ -78,6 +78,11 @@ h3 {
 }
 
 
+@media (max-width: 640px) {
+
+  p {padding: 0 12px;}
+}
+
 
 a {
   color: var(--highlight-color);
@@ -114,7 +119,6 @@ main {
 .div-presentation{
   text-align: center;
 }
-
 
 .div-presentation img{
   width: 100%;
@@ -169,6 +173,56 @@ ul#breadcrumbs li+li:before {
 
 ul#breadcrumbs li:last-child {
   font-weight: 600;
+}
+
+
+/* Gallery on movies */
+.container-pics {
+  margin: auto;
+  border: var(--bg-color) solid 5px;
+  background: var(--bg-color);
+}
+
+.container-pics h3 {
+  font-size: calc(var(--font-size)*2);
+  padding: calc(var(--font-size)*2.5);
+
+}
+
+/* make images fill their container*/
+.container-pics img {
+  max-width: 100%;
+}
+
+.container-pics img:hover {
+  box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 1);
+  border: 1px solid var(--bg-color);
+  transform: scale(1.5);
+}
+
+/* CSS Grid*/
+.img-grid {
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+  text-align: center;
+}
+
+/* Media Query for changing grid on bigger screens*/
+
+/* Bigger than Phones(tablet) */
+@media only screen and (min-width: 750px) {
+  .img-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Bigger than Phones(laptop / desktop) */
+@media only screen and (min-width: 970px) {
+  .img-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 
